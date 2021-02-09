@@ -6,6 +6,7 @@ const allText = document.getElementsByTagName('p')
 const buttonElements = document.querySelectorAll('.btn')
 const logo = document.querySelector('.logo-heading');
 
+
 nav.addEventListener("mouseover", (event) => {
     event.target.style.color = "orange";
 
@@ -19,6 +20,7 @@ nav.addEventListener("mouseover", (event) => {
     Array.from(funBus).forEach(elem => {
         elem.addEventListener('dblclick', event => {
             event.target.style.fontStyle = 'italic';
+            event.stopPropagation();
         });
     });
 
